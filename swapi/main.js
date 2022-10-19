@@ -1,4 +1,6 @@
 const residentBtn = document.querySelector('button')
+const residentsArea = document.getElementById('char-cards')
+
 let putNamesHere = document.querySelector('#char-cards')
 
 const clickedBtn = (event) => {
@@ -24,4 +26,10 @@ const clickedBtn = (event) => {
     })
 }
 
+function sound () {
+    var audio = new Audio("./public/audio.mp3");
+    audio.play();
+}
+
 residentBtn.addEventListener('click', clickedBtn)
+residentsArea.addEventListener('mouseover', sound)
